@@ -3,175 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trailbrew | Your Portable Coffee Adventure</title>
+  <title>Trailbrew - Your Travel Coffee Companion</title>
   <style>
-    /* Reset & base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #fdf6f0;
-      color: #4b3a2f;
-      line-height: 1.6;
-    }
+    /* Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
 
-    /* Navigation bar */
-    nav {
-      background-color: #6b4f4f;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #F4E9DC;
+      color: #4B2E19;
+    }
+    header {
+      background-color: #7B4F27;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #F4E9DC;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0;
+      cursor: pointer;
     }
     nav a {
-      color: white;
+      color: #F4E9DC;
       text-decoration: none;
-      margin: 0 20px;
+      margin-left: 1.5rem;
       font-weight: 600;
-      font-size: 18px;
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #d4a76a;
+      color: #D9CAB3;
     }
 
     /* Hero Section */
     .hero {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
       height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #F4E9DC;
+      padding: 0 2rem;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+    .btn-shop {
+      background-color: #4B2E19;
+      color: #F4E9DC;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(75,46,25,0.5);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-shop:hover {
+      background-color: #7B4F27;
+    }
+
+    /* Product Highlight Section */
+    .product-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background-color: #D9CAB3;
+      color: #4B2E19;
+      gap: 2rem;
+    }
+    .product-img {
+      flex: 1 1 350px;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    .product-img img {
+      width: 100%;
+      display: block;
+    }
+    .product-info {
+      flex: 1 1 350px;
+      max-width: 400px;
+      font-size: 1.1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      padding: 0 20px;
-      text-align: center;
+      padding: 1rem 2rem;
     }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
+    .product-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-    .hero p {
-      font-size: 1.4rem;
-      margin-bottom: 30px;
-      max-width: 600px;
+    .product-info p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
     }
-    .btn-primary {
-      background-color: #d4a76a;
-      color: #4b3a2f;
-      padding: 15px 40px;
-      border-radius: 30px;
+    .price {
       font-weight: 700;
-      font-size: 1.2rem;
-      text-decoration: none;
-      box-shadow: 0 6px 12px rgba(212,167,106,0.5);
-      transition: background-color 0.3s ease;
-    }
-    .btn-primary:hover {
-      background-color: #b8863b;
-      color: white;
-    }
-
-    /* Main Content */
-    main {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 50px;
-    }
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #6b4f4f;
-      letter-spacing: 1.2px;
-    }
-    p, ul {
-      font-size: 1.1rem;
-      color: #5a4a3d;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin: 12px 0;
-      position: relative;
-      padding-left: 25px;
-      font-weight: 600;
-    }
-    ul li::before {
-      content: '☕';
-      position: absolute;
-      left: 0;
-      color: #d4a76a;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      color: #7B4F27;
+      margin-bottom: 1.5rem;
     }
 
     /* Footer */
     footer {
-      background-color: #6b4f4f;
-      color: white;
+      background-color: #7B4F27;
+      color: #F4E9DC;
       text-align: center;
-      padding: 20px 10px;
+      padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 60px;
+      margin-top: 3rem;
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .btn-primary {
-        padding: 12px 25px;
-        font-size: 1rem;
+    @media(max-width: 900px) {
+      .product-highlight {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="product.html">Product</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <header>
+    <h1 onclick="location.href='index.html'">Trailbrew</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <section class="hero">
-    <h1>Trailbrew</h1>
-    <p>Your Portable Coffee Adventure — Fresh espresso, anywhere life takes you.</p>
-    <a href="product.html" class="btn-primary">Shop Now</a>
+    <div>
+      <h2>Your Perfect Coffee Companion on Every Adventure</h2>
+      <p>Experience fresh espresso anytime, anywhere — from mountain peaks to city streets.</p>
+      <a href="product.html" class="btn-shop">Shop Now</a>
+    </div>
   </section>
 
-  <main>
-    <section>
-      <h2>Why Trailbrew?</h2>
-      <p>
-        Trailbrew is the perfect companion for travel lovers and coffee enthusiasts alike. Our portable espresso machine brings the luxury of fresh coffee to every outdoor adventure — hiking, camping, road trips, and more.
-      </p>
-      <ul>
-        <li>Compact and lightweight design for easy travel</li>
-        <li>Compatible with ground coffee and capsules</li>
-        <li>Rechargeable battery for cordless convenience</li>
-        <li>Durable and stylish with an outdoor-inspired look</li>
-      </ul>
-    </section>
-  </main>
+  <section class="product-highlight" aria-label="Featured product">
+    <div class="product-img">
+      <img src="https://ae01.alicdn.com/kf/H0290ad08a4914c9ea1607e7cbd34a5efB/Wireless-Electric-Portable-Espresso-Coffee-Machine-for-Car-Home-Camping-Coffee-Maker-3-in-1-Capsule-Powder-Travel.jpg" alt="Portable espresso coffee machine in black with travel accessories" />
+    </div>
+    <div class="product-info">
+      <h3>Wireless Portable Espresso Machine</h3>
+      <p>Enjoy barista-quality espresso on the go with our compact, rechargeable espresso machine. Compatible with Nespresso capsules, ground coffee, or pods.</p>
+      <p class="price">$69.99 <span style="text-decoration: line-through; color:#A76B4D;">$81.49</span></p>
+      <a href="product.html" class="btn-shop">Buy Now</a>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Trailbrew | Crafted for Coffee Lovers on the Go
+    &copy; 2025 Trailbrew. All rights reserved.
   </footer>
-
 </body>
 </html>
