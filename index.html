@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trailbrew - Your Travel Coffee Companion</title>
   <style>
-    /* Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
 
     body {
@@ -14,6 +13,7 @@
       background-color: #F4E9DC;
       color: #4B2E19;
     }
+
     header {
       background-color: #7B4F27;
       padding: 1.2rem 2rem;
@@ -23,12 +23,14 @@
       color: #F4E9DC;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       margin: 0;
       cursor: pointer;
     }
+
     nav a {
       color: #F4E9DC;
       text-decoration: none;
@@ -36,11 +38,11 @@
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
       color: #D9CAB3;
     }
 
-    /* Hero Section */
     .hero {
       background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80');
       background-size: cover;
@@ -53,12 +55,14 @@
       color: #F4E9DC;
       padding: 0 2rem;
     }
+
     .hero h2 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 0.3rem;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
+
     .hero p {
       font-size: 1.3rem;
       font-weight: 600;
@@ -66,6 +70,7 @@
       max-width: 600px;
       margin: 0 auto 1.5rem;
     }
+
     .btn-shop {
       background-color: #4B2E19;
       color: #F4E9DC;
@@ -80,11 +85,11 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn-shop:hover {
       background-color: #7B4F27;
     }
 
-    /* Product Highlight Section */
     .product-highlight {
       display: flex;
       flex-wrap: wrap;
@@ -94,6 +99,7 @@
       color: #4B2E19;
       gap: 2rem;
     }
+
     .product-img {
       flex: 1 1 350px;
       max-width: 400px;
@@ -101,10 +107,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       overflow: hidden;
     }
+
     .product-img img {
       width: 100%;
       display: block;
     }
+
     .product-info {
       flex: 1 1 350px;
       max-width: 400px;
@@ -114,15 +122,18 @@
       justify-content: center;
       padding: 1rem 2rem;
     }
+
     .product-info h3 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
+
     .product-info p {
       margin-bottom: 1rem;
       line-height: 1.5;
     }
+
     .price {
       font-weight: 700;
       font-size: 1.5rem;
@@ -130,7 +141,6 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Footer */
     footer {
       background-color: #7B4F27;
       color: #F4E9DC;
@@ -140,16 +150,45 @@
       margin-top: 3rem;
     }
 
-    /* Responsive */
     @media(max-width: 900px) {
       .product-highlight {
         flex-direction: column;
         align-items: center;
       }
     }
+
+    /* Gallery Section */
+    .gallery-section {
+      background: #f4e9dc;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .gallery-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4B2E19;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-grid img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1 onclick="location.href='index.html'">Trailbrew</h1>
     <nav>
@@ -170,7 +209,7 @@
 
   <section class="product-highlight" aria-label="Featured product">
     <div class="product-img">
-      <img src="https://ae01.alicdn.com/kf/H0290ad08a4914c9ea1607e7cbd34a5efB/Wireless-Electric-Portable-Espresso-Coffee-Machine-for-Car-Home-Camping-Coffee-Maker-3-in-1-Capsule-Powder-Travel.jpg" alt="Portable espresso coffee machine in black with travel accessories" />
+      <img src="images/espresso-main.png" alt="Portable espresso coffee machine in black with travel accessories" />
     </div>
     <div class="product-info">
       <h3>Wireless Portable Espresso Machine</h3>
@@ -180,8 +219,27 @@
     </div>
   </section>
 
+  <!-- 🖼️ Gallery Section -->
+  <section class="gallery-section">
+    <h2>Explore TrailBrew In Detail</h2>
+    <div class="gallery-grid">
+      <img src="images/espresso-main.png" alt="Main View">
+      <img src="images/espresso-opened.png" alt="Machine Open">
+      <img src="images/espresso-parts.png" alt="Parts Overview">
+      <img src="images/espresso-kit.png" alt="Full Kit View">
+      <img src="images/espresso-case.png" alt="Travel Case">
+      <img src="images/espresso-3in1.png" alt="3-in-1 Function">
+      <img src="images/espresso-black.png" alt="Color: Black">
+      <img src="images/espresso-green.png" alt="Color: Green">
+      <img src="images/espresso-grey.png" alt="Color: Grey">
+      <img src="images/espresso-white.png" alt="Color: White">
+      <img src="images/espresso-wood.png" alt="Color: Wood Finish">
+    </div>
+  </section>
+
   <footer>
     &copy; 2025 Trailbrew. All rights reserved.
   </footer>
+
 </body>
 </html>
