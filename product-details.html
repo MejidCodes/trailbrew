@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trailbrew Product Details</title>
+  <title>Trailbrew Portable Espresso Machine</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f1ee;
+      background-color: #f9f8f6;
       color: #333;
     }
     header {
       background-color: #7B4F27;
-      color: #fff;
+      color: white;
       padding: 1rem 2rem;
       font-size: 1.5rem;
       font-weight: bold;
+      cursor: pointer;
+    }
+    header:hover {
+      background-color: #603e1f;
     }
     .container {
       display: flex;
@@ -36,6 +40,8 @@
       width: 100%;
       border: 2px solid transparent;
       cursor: pointer;
+      border-radius: 8px;
+      object-fit: cover;
     }
     .thumbnails img:hover,
     .thumbnails img.active {
@@ -43,11 +49,21 @@
     }
     .main-image {
       flex: 1 1 600px;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .main-image img {
       width: 100%;
+      height: auto;
       max-height: 600px;
       object-fit: contain;
+      border-radius: 12px;
+      cursor: pointer;
     }
     .product-info {
       flex: 1 1 400px;
@@ -56,7 +72,7 @@
     }
     .product-info h1 {
       font-size: 2rem;
-      color: #7B4F27;
+      color: #4B2E19;
       margin-bottom: 1rem;
     }
     .price {
@@ -74,45 +90,103 @@
       border-radius: 8px;
       cursor: pointer;
       margin-bottom: 2rem;
+      width: fit-content;
     }
     .description {
       line-height: 1.6;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
+    footer {
+      background-color: #7B4F27;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .fullscreen-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+    .fullscreen-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
-  <header>Trailbrew</header>
+
+  <header onclick="location.href='index.html'">Trailbrew</header>
+
   <div class="container">
+    <!-- Thumbnails -->
     <div class="thumbnails">
       <img src="espresso-main.png.avif.png" onclick="changeMainImage(this)" class="active">
       <img src="espresso-opened.png.avif" onclick="changeMainImage(this)">
       <img src="espresso-3in1.png.avif" onclick="changeMainImage(this)">
       <img src="espresso-kit.png.avif" onclick="changeMainImage(this)">
+      <img src="espresso-case.png.avif" onclick="changeMainImage(this)">
     </div>
+
+    <!-- Main Product Image -->
     <div class="main-image">
-      <img id="mainDisplay" src="espresso-main.png.avif.png" alt="Trailbrew Portable Espresso Machine">
+      <img id="mainDisplay" src="espresso-main.png.avif.png" alt="Trailbrew Portable Espresso Machine" onclick="openFullscreen(this.src)">
     </div>
+
+    <!-- Product Details -->
     <div class="product-info">
       <h1>Wireless Portable Espresso Machine</h1>
       <div class="price">$69.99 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$81.49</span></div>
-      <button class="buy-btn">Buy Now</button>
+      <button class="buy-btn">Add to Cart</button>
       <div class="description">
-        <p>This rechargeable espresso machine lets you brew quality espresso anywhere — at home, at work, or on the go. Compatible with ground coffee, Nespresso capsules, and larger pod types for versatility. Portable, lightweight, and perfect for travelers and campers.</p>
+        <p>The Trailbrew Portable Espresso Machine lets you make café-style espresso wherever life takes you. Use ground coffee, small capsules, or large pods for 3-in-1 compatibility. A must-have for travelers, commuters, and coffee lovers who won’t settle for gas station brews.</p>
+        <h3>Key Features:</h3>
         <ul>
-          <li>60ML water tank capacity</li>
-          <li>Rechargeable battery, cordless design</li>
-          <li>3-in-1 compatibility (powder, small, and large capsules)</li>
-          <li>Compact, durable and easy to clean</li>
+          <li>60ML water tank (hot or cold)</li>
+          <li>Rechargeable battery-powered</li>
+          <li>3-in-1 compatibility: coffee powder, small and large capsules</li>
+          <li>Powerful 20-bar pressure extraction</li>
+          <li>Lightweight, compact, and cordless</li>
         </ul>
       </div>
     </div>
   </div>
+
+  <div class="fullscreen-overlay" id="fullscreenOverlay" onclick="closeFullscreen()">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+  </div>
+
+  <footer>&copy; 2025 Trailbrew. All rights reserved.</footer>
+
   <script>
     function changeMainImage(img) {
       document.getElementById("mainDisplay").src = img.src;
       document.querySelectorAll('.thumbnails img').forEach(i => i.classList.remove('active'));
       img.classList.add('active');
     }
+
+    function openFullscreen(src) {
+      const overlay = document.getElementById("fullscreenOverlay");
+      const fullscreenImg = document.getElementById("fullscreenImage");
+      fullscreenImg.src = src;
+      overlay.style.display = "flex";
+    }
+
+    function closeFullscreen() {
+      document.getElementById("fullscreenOverlay").style.display = "none";
+    }
   </script>
+
 </body>
 </html>
