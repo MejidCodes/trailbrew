@@ -1,114 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrailBrew Portable Espresso Maker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trailbrew - Home</title>
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f1ee;
+      color: #4b3b2b;
       margin: 0;
       padding: 0;
-      background-color: #f3f3f3;
-      color: #333;
     }
-    header {
-      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') center/cover no-repeat;
-      color: white;
-      padding: 5rem 2rem;
+    nav {
+      background: #6b4f4f;
+      padding: 10px;
       text-align: center;
     }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .container {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    .product-image {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-    }
-    .price {
-      color: #27ae60;
-      font-size: 1.5rem;
-      margin-top: -10px;
-      margin-bottom: 1.5rem;
-    }
-    ul.features {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-    ul.features li::before {
-      content: '✔';
-      color: #27ae60;
-      margin-right: 10px;
-    }
-    .buy-btn {
-      display: inline-block;
-      background-color: #d35400;
-      color: white;
-      padding: 1rem 2rem;
+    nav a {
+      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
-      transition: background 0.3s;
+      font-size: 18px;
     }
-    .buy-btn:hover {
-      background-color: #e67e22;
+    nav a:hover {
+      color: #c9a66b;
     }
-    .scenario-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: url('coffee-travel-bg.jpg') no-repeat center center/cover;
+      color: #fff;
     }
-    .scenario-gallery img {
-      width: 100%;
-      border-radius: 8px;
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px #3a2e2e;
+    }
+    header p {
+      font-size: 22px;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px #3a2e2e;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .btn {
+      background: #6b4f4f;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #c9a66b;
+      color: #4b3b2b;
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="Trailbrew_Homepage1.html">Home</a>
+    <a href="Trailbrew_productpage1.html">Product</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
   <header>
-    <h1>TrailBrew</h1>
-    <p>Your Adventure, Your Brew — Anywhere.</p>
+    <h1>Welcome to Trailbrew</h1>
+    <p>Your portable coffee companion for every adventure</p>
+    <a href="Trailbrew_productpage1.html" class="btn">Shop Now</a>
   </header>
 
-  <div class="container">
-    <img src="https://ae01.alicdn.com/kf/Sedeef9a690ca44d8a90c0c92c0a84829j.jpg" alt="TrailBrew Portable Coffee Maker" class="product-image">
+  <main>
+    <section>
+      <h2>Enjoy Fresh Espresso On The Go</h2>
+      <p>
+        Trailbrew's wireless portable espresso machine lets you brew premium coffee anywhere – from mountain peaks to cozy campsites.
+        Lightweight and compact, it’s perfect for travel lovers and coffee enthusiasts alike.
+      </p>
+    </section>
 
-    <h2>Wireless Portable Espresso Machine</h2>
-    <p class="price">$49.99 USD</p>
+    <section>
+      <h2>Why Choose Trailbrew?</h2>
+      <ul>
+        <li>Works with capsules or ground coffee</li>
+        <li>Rechargeable battery for cordless use</li>
+        <li>Fast, easy brewing wherever you are</li>
+        <li>Stylish and durable design</li>
+      </ul>
+    </section>
+  </main>
 
-    <p>Meet the <strong>TrailBrew Portable Espresso Maker</strong> — a sleek, 3-in-1 travel coffee solution built for outdoor adventures, van life, or your daily commute. Brew barista-quality espresso using coffee capsules, ground coffee, or coffee powder anywhere, anytime. Fully rechargeable, lightweight, and ruggedly designed for portability.</p>
-
-    <ul class="features">
-      <li>Compatible with Nespresso & Dolce Gusto capsules, or ground coffee</li>
-      <li>Built-in rechargeable battery with USB charging</li>
-      <li>Perfect for camping, hiking, road trips, or the office</li>
-      <li>Powerful 72W output with quick brew technology</li>
-      <li>Water capacity up to 60mL</li>
-    </ul>
-
-    <a href="#" class="buy-btn">Buy Now</a>
-
-    <h3>Adventure Ready</h3>
-    <p>Whether you're watching the sunrise on a mountain peak or stuck in city traffic, TrailBrew gives you a rich, hot shot of espresso at the push of a button.</p>
-
-    <div class="scenario-gallery">
-      <img src="https://images.unsplash.com/photo-1602698854115-4d9c7f09c559" alt="Camping with coffee">
-      <img src="https://images.unsplash.com/photo-1526406915894-6c4fcf235b4b" alt="Coffee at mountain base">
-      <img src="https://images.unsplash.com/photo-1568051243850-650c184e47e7" alt="Espresso in the van">
-    </div>
-  </div>
 </body>
 </html>
