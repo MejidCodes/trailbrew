@@ -3,102 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trailbrew - Home</title>
+  <title>Trailbrew | Your Portable Coffee Adventure</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f1ee;
-      color: #4b3b2b;
+    /* Reset & base */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #fdf6f0;
+      color: #4b3a2f;
+      line-height: 1.6;
+    }
+
+    /* Navigation bar */
     nav {
-      background: #6b4f4f;
-      padding: 10px;
+      background-color: #6b4f4f;
+      padding: 15px 0;
       text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 20px;
+      font-weight: 600;
       font-size: 18px;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #c9a66b;
+      color: #d4a76a;
     }
-    header {
-      padding: 60px 20px;
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      padding: 0 20px;
       text-align: center;
-      background: url('coffee-travel-bg.jpg') no-repeat center center/cover;
-      color: #fff;
     }
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 6px #3a2e2e;
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
     }
-    header p {
-      font-size: 22px;
-      font-weight: 600;
-      text-shadow: 1px 1px 4px #3a2e2e;
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      max-width: 600px;
     }
+    .btn-primary {
+      background-color: #d4a76a;
+      color: #4b3a2f;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(212,167,106,0.5);
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #b8863b;
+      color: white;
+    }
+
+    /* Main Content */
     main {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin: 60px auto;
       padding: 0 20px;
     }
-    .btn {
-      background: #6b4f4f;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 20px;
-      transition: background 0.3s ease;
+    section {
+      margin-bottom: 50px;
     }
-    .btn:hover {
-      background: #c9a66b;
-      color: #4b3b2b;
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #6b4f4f;
+      letter-spacing: 1.2px;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      color: #5a4a3d;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin: 12px 0;
+      position: relative;
+      padding-left: 25px;
+      font-weight: 600;
+    }
+    ul li::before {
+      content: '☕';
+      position: absolute;
+      left: 0;
+      color: #d4a76a;
+      font-size: 1.3rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #6b4f4f;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="Trailbrew_Homepage1.html">Home</a>
-    <a href="Trailbrew_productpage1.html">Product</a>
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
 
-  <header>
-    <h1>Welcome to Trailbrew</h1>
-    <p>Your portable coffee companion for every adventure</p>
-    <a href="Trailbrew_productpage1.html" class="btn">Shop Now</a>
-  </header>
+  <section class="hero">
+    <h1>Trailbrew</h1>
+    <p>Your Portable Coffee Adventure — Fresh espresso, anywhere life takes you.</p>
+    <a href="product.html" class="btn-primary">Shop Now</a>
+  </section>
 
   <main>
     <section>
-      <h2>Enjoy Fresh Espresso On The Go</h2>
+      <h2>Why Trailbrew?</h2>
       <p>
-        Trailbrew's wireless portable espresso machine lets you brew premium coffee anywhere – from mountain peaks to cozy campsites.
-        Lightweight and compact, it’s perfect for travel lovers and coffee enthusiasts alike.
+        Trailbrew is the perfect companion for travel lovers and coffee enthusiasts alike. Our portable espresso machine brings the luxury of fresh coffee to every outdoor adventure — hiking, camping, road trips, and more.
       </p>
-    </section>
-
-    <section>
-      <h2>Why Choose Trailbrew?</h2>
       <ul>
-        <li>Works with capsules or ground coffee</li>
-        <li>Rechargeable battery for cordless use</li>
-        <li>Fast, easy brewing wherever you are</li>
-        <li>Stylish and durable design</li>
+        <li>Compact and lightweight design for easy travel</li>
+        <li>Compatible with ground coffee and capsules</li>
+        <li>Rechargeable battery for cordless convenience</li>
+        <li>Durable and stylish with an outdoor-inspired look</li>
       </ul>
     </section>
   </main>
+
+  <footer>
+    &copy; 2025 Trailbrew | Crafted for Coffee Lovers on the Go
+  </footer>
 
 </body>
 </html>
