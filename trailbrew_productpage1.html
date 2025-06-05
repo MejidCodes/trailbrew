@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trailbrew - Home</title>
+  <title>Trailbrew - Product</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,41 +27,48 @@
     nav a:hover {
       color: #c9a66b;
     }
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: url('coffee-travel-bg.jpg') no-repeat center center/cover;
-      color: #fff;
-    }
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 6px #3a2e2e;
-    }
-    header p {
-      font-size: 22px;
-      font-weight: 600;
-      text-shadow: 1px 1px 4px #3a2e2e;
-    }
     main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    .btn {
+    h1, h2 {
+      color: #6b4f4f;
+    }
+    .product-image {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(107,79,79,0.3);
+    }
+    .price {
+      font-size: 28px;
+      color: #c97e22;
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .buy-button {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
       background: #6b4f4f;
       color: white;
-      padding: 15px 30px;
-      text-decoration: none;
+      padding: 15px 0;
+      text-align: center;
       font-weight: bold;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 6px;
       transition: background 0.3s ease;
     }
-    .btn:hover {
+    .buy-button:hover {
       background: #c9a66b;
       color: #4b3b2b;
+    }
+    ul {
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -74,30 +81,32 @@
     <a href="#">Contact</a>
   </nav>
 
-  <header>
-    <h1>Welcome to Trailbrew</h1>
-    <p>Your portable coffee companion for every adventure</p>
-    <a href="Trailbrew_productpage1.html" class="btn">Shop Now</a>
-  </header>
-
   <main>
-    <section>
-      <h2>Enjoy Fresh Espresso On The Go</h2>
-      <p>
-        Trailbrew's wireless portable espresso machine lets you brew premium coffee anywhere – from mountain peaks to cozy campsites.
-        Lightweight and compact, it’s perfect for travel lovers and coffee enthusiasts alike.
-      </p>
-    </section>
+    <h1>Wireless Electric Portable Espresso Coffee Machine</h1>
+    <img src="espresso-coffee-machine.jpg" alt="Trailbrew Portable Espresso Machine" class="product-image" />
+    
+    <p class="price">$59.99</p>
 
-    <section>
-      <h2>Why Choose Trailbrew?</h2>
-      <ul>
-        <li>Works with capsules or ground coffee</li>
-        <li>Rechargeable battery for cordless use</li>
-        <li>Fast, easy brewing wherever you are</li>
-        <li>Stylish and durable design</li>
-      </ul>
-    </section>
+    <a href="#" class="buy-button">Buy Now</a>
+
+    <h2>Product Description</h2>
+    <p>
+      Take your coffee anywhere with Trailbrew's portable espresso machine. Whether camping, hiking, or on a road trip, enjoy fresh espresso brewed to perfection. Compatible with ground coffee and capsules, rechargeable, and lightweight for your travel needs.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>72W power for rich espresso extraction</li>
+      <li>Works with capsules or ground coffee</li>
+      <li>Rechargeable battery for cordless use</li>
+      <li>Lightweight and compact design for travel</li>
+      <li>Easy to clean and maintain</li>
+      <li>Durable plastic housing with stylish finish</li>
+    </ul>
+
+    <h2>Customer Reviews</h2>
+    <p>Rated 4.9/5 by over 6,500 happy customers!</p>
+
   </main>
 
 </body>
